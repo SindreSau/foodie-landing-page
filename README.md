@@ -7,6 +7,6 @@ This project is for academic purposes only. I am designing a responsive landing 
 
 <h2>Useful links</h2>
 <h3>Github pages preview</h3>
-"link goes here"
+https://sindresau.github.io/foodie-landing-page/
 <h3>Figma design file</h3>
 https://www.figma.com/file/KawxNnCZ1epHjQu0wSqlG2/Food-delivery-app-Ui-kit?node-id=0%3A1&t=oYHVzhiQHY1V92oo-0
