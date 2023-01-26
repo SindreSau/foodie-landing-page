@@ -13,14 +13,14 @@ function Navbar({ fixed }) {
           {/* LOGO */}
           <Link to='/'><img src={logo} alt='logo-image'></img></Link>
           {/* Mobile dropdown */}
-          <button className='text-gray-400 md:hidden' onClick={() => setNavbarOpen(!navbarOpen)}>
+          <button className='text-gray-400 md:hidden' onClick={() => setNavbarOpen(!navbar)}>
             <span className='sr-only'></span>
             <span className="material-symbols-outlined ">
               menu
             </span>
           </button>
           {/* Desktop menu */}
-          <ul className='flex items-center gap-24 max-md:hidden'>
+          <ul className={'flex items-center gap-24 max-md:hidden'}>
             <li>
               <Link to='/' className={({ isActive }) => isActive ? activeClassName : undefined}>
                 Home

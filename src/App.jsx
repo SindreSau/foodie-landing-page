@@ -18,12 +18,11 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home />} exact/>
         <Route path='/product' element={<Product />}/>
         <Route path='/faq' element={<Faq />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='*' component={<NoPage />}/>
-        
       </Routes>
     </Router>
   )
