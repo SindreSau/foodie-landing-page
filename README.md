@@ -1,6 +1,8 @@
 <h1>Food delivery landing page</h1>
 <h4>using Vite | React | Tailwind</h4>
 
+<br>
+
 <h2>Description</h2>
 <p>
 This project is for academic purposes only. I am designing a responsive landing page based on a figma design to learn React with vite and tailwind.
