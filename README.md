@@ -11,6 +11,7 @@ This project is for academic purposes only. I am designing a responsive landing 
 <h3>Latest deployment via netlify</h3>
 https://sindresau-foodie-delivery.netlify.app/
 
+<br>
 
 <h3>Figma design file</h3>
 <h5><i>NOT CREATED BY ME<i></h5>
