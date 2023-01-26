@@ -1,0 +1,49 @@
+:root {
+  --clr-primary: #FA4A0C;
+  --clr-secondary: #252B42;
+  --clr-text-secondary: #737373:
+}
+
+/* COLOR Utils */
+
+.clr-primary {
+  color: var(--clr-primary)
+}
+
+.clr-text-primary {
+  color: var(--clr-secondary);
+}
+
+.clr-text-secondary {
+  color: var(--clr-text-secondary);
+}
+
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+
+
+/* NAV Additional styling */
+li {
+  position: relative;
+}
+
+li::after {
+  background-color: var(--clr-primary);
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: width 250ms ease;
+}
+
+li:hover::after {
+  width: 100%;
+}
