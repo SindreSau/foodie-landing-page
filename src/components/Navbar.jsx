@@ -13,7 +13,7 @@ function Navbar({ fixed }) {
           {/* LOGO */}
           <Link to='/'><img src={logo} alt='logo-image'></img></Link>
           {/* Mobile dropdown */}
-          <button className='text-gray-400 md:hidden'>
+          <button className='text-gray-400 md:hidden' onClick={() => setNavbarOpen(!navbarOpen)}>
             <span className='sr-only'></span>
             <span className="material-symbols-outlined ">
               menu
