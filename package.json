@@ -1,14 +1,15 @@
 {
-  "homepage": "sindresau.github.io/foodie-landing-page",
+  "homepage": "https://sindresau.github.io/foodie-landing-page",
   "name": "foodie-landing-page",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
