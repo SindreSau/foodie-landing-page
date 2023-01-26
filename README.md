@@ -1,5 +1,5 @@
 <h1>Food delivery landing page</h1>
-<h2>using Vite | React | Tailwind</h2>
+<h4>using Vite | React | Tailwind</h4>
 
 <h2>Description</h2>
 <p>
