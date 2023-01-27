@@ -1,6 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
 #root {
   max-width: 1280px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
-  /* box-sizing: border-box; */
+  overflow-x: hidden;
+}
+
+.ff-montserrat-400 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.ff-montserrat-500 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.ff-montserrat-600 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.ff-poppins-500 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.ff-poppins-600 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.ff-poppins-700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }

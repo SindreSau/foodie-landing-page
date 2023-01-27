@@ -28,22 +28,45 @@
 
 
 /* NAV Additional styling */
-li {
-  position: relative;
+@media (hover: hover) {
+  li {
+    position: relative;
+  }
+
+  li::after {
+    background-color: var(--clr-primary);
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: width 250ms ease;
+  }
+
+  li:hover::after {
+    width: 100%;
+  }
 }
 
-li::after {
-  background-color: var(--clr-primary);
-  content: "";
-  width: 0;
-  height: 2px;
+.nav-dropdown {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  transition: width 250ms ease;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 20px;
+  width: 80vw;
+  top: 132px;
+  right: 0;
+  text-align: end;
+  padding: 20px;
+  background-color: #bbb;
+
+  transform: translateX(80vw);
+  transition: transform .2s ease-in-out;
 }
 
-li:hover::after {
-  width: 100%;
+.nav-dropdown-show {
+  transform: translateX(0);
 }
