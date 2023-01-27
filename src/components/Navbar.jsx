@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 import logo from '../../src/assets/images/nav-logo.png'
 import { FiMenu, FiX } from 'react-icons/fi'
 
-function Navbar() {
+function Navbar({ fixed }) {
   //Functionality for navbar responsiveness
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   useEffect(() => {
@@ -15,7 +15,8 @@ function Navbar() {
       setIsOpen(false)
     }, false)
   }, [isMobile])
-  
+
+  // Set the menu-button icon
   const [isOpen, setIsOpen] = useState(false);
   const [menuButton, setMenuButton] = useState(<FiMenu />)
   const handleMenuButton = () => {
@@ -32,15 +33,23 @@ function Navbar() {
     }
   }
 
+  // Hide menu on scroll
+  window.addEventListener('scroll', () => {
+    if (isMobile && window.scrollY > 1) {
+      const navList = document.getElementById('nav-list');
+      navList.classList.remove('nav-dropdown-show')
+      setMenuButton(<FiMenu />)
+      setIsOpen(false)
+    }
+  })
+
+  // Function to hide menu on dom-interaction
   const hideMenu = () => {
     const navList = document.getElementById('nav-list');
     navList.classList.remove('nav-dropdown-show')
     setMenuButton(<FiMenu />)
     setIsOpen(false)
   }
-
-  // Styling menu buttons
-  let iconStyle = {}
 
   // Add color to the selected list-item
   let activeClassName = "clr-primary";
