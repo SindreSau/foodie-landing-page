@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
 #root {
-  position: relative;
+  /* position: relative; */
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
