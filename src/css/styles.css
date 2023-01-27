@@ -131,11 +131,13 @@ nav {
 .app-preview {
   position: absolute;
   width: 51%;
+
+  -webkit-filter: drop-shadow(16px 16px 10px #00000040);
+  filter: drop-shadow(16px 16px 10px #00000040);
 }
 
 .app-preview-left {
   z-index: 1;
-  filter: drop-shadow(16px 16px 10px black);
 }
 
 .app-preview-right {
