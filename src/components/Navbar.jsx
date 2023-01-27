@@ -32,13 +32,6 @@ function Navbar() {
     }
   }
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      console.log("hiding");
-      hideMenu
-    }
-  })
-
   const hideMenu = () => {
     const navList = document.getElementById('nav-list');
     navList.classList.remove('nav-dropdown-show')

@@ -6,14 +6,12 @@
   margin: 0 auto;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-body {
-  overflow-x: hidden;
-}
 
 .ff-montserrat-400 {
   font-family: 'Montserrat', sans-serif;
