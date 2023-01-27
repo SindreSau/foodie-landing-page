@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 import logo from '../../src/assets/images/nav-logo.png'
 import { FiMenu, FiX } from 'react-icons/fi'
 
-function Navbar({ fixed }) {
+function Navbar() {
   //Functionality for navbar responsiveness
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   useEffect(() => {
@@ -31,6 +31,10 @@ function Navbar({ fixed }) {
       }
     }
   }
+
+  window.addEventListener('scroll', () => {
+    hideMenu
+  })
 
   const hideMenu = () => {
     const navList = document.getElementById('nav-list');
