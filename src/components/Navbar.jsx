@@ -33,7 +33,10 @@ function Navbar() {
   }
 
   window.addEventListener('scroll', () => {
-    hideMenu
+    if (window.scrollY > 100) {
+      console.log("hiding");
+      hideMenu
+    }
   })
 
   const hideMenu = () => {

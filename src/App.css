@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .ff-montserrat-400 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
