@@ -126,6 +126,24 @@ nav {
   image-rendering: optimizeQuality;
 }
 
+.app-preview-container {}
+
+.app-preview {
+  position: absolute;
+  width: 51%;
+}
+
+.app-preview-left {
+  z-index: 1;
+  filter: drop-shadow(16px 16px 10px black);
+}
+
+.app-preview-right {
+  right: 8px;
+  top: 50px;
+  width: 49%;
+}
+
 @media (max-width: 767px) {
   /* MOBILE */
 
