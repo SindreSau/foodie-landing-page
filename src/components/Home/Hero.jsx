@@ -1,7 +1,7 @@
 import React from 'react'
 import heroBackground from '../../assets/images/home-hero-bg-2x.png'
-import appPreviewLeft from '../../assets/images/app-preview-left.png'
-import appPreviewRight from '../../assets/images/app-preview-right.png'
+import appPreviewLeft from '../../assets/images/app-preview-left-lg.png'
+import appPreviewRight from '../../assets/images/app-preview-right-lg.png'
 
 const Hero = () => {
   return (
