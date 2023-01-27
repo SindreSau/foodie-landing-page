@@ -46,8 +46,8 @@ const Hero = () => {
 
         {/* bottom header and hr */}
         <div className='w-full'>
-          <h2 className='ff-ff-poppins-600 text-center text-2xl py-4 pb-4'>How the app works</h2>
-          <hr className='md:mx-8 my-5 bg-gray-200 h-0.5 border-none'></hr>
+          <h2 className='ff-poppins-600 md: text-center text-2xl md:text-4xl py-4 pb-4'>How the app works</h2>
+          <hr className='md:mx-8 my-5 md:my-8 bg-gray-200 h-0.5 border-none'></hr>
         </div>
 
       </div>

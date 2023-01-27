@@ -61,6 +61,11 @@
   transition: background-color 150ms;
 }
 
+.text-44px {
+  font-size: 44px;
+  line-height: 36px;
+}
+
 
 
 /* NAV Additional styling */
