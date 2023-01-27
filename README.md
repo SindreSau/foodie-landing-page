@@ -1,4 +1,7 @@
-<h1>Food delivery landing page - using Vite | React | Tailwind</h1>
+<h1 align="center">Food delivery landing page</h1>
+<h4 align="center">Vite    |    React    |    Tailwind</h4>
+
+<br>
 
 <h2>Description</h2>
 <p>
