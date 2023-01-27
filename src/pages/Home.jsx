@@ -1,8 +1,13 @@
 import React from 'react'
+import Hero from '../components/Home/Hero'
 
 const Home = () => {
   return (
-    <h1 className='bg-primary h-52'>Home</h1>
+    <>
+      <section className='hero-home bg-mobile sm:bg-transparent'>
+        <Hero />
+      </section>
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink as Link } from 'react-router-dom'
 import logo from '../../src/assets/images/nav-logo.png'
+import { FiMenu, FiX } from 'react-icons/fi'
 
 function Navbar({ fixed }) {
   //Functionality for navbar responsiveness
@@ -8,22 +9,38 @@ function Navbar({ fixed }) {
   useEffect(() => {
     window.addEventListener('resize', () => {
       const ismobile = window.innerWidth < 768;
-      if (ismobile !== isMobile) {
-        setIsMobile(ismobile)
-      }
+      const navList = document.getElementById('nav-list');
+      if (ismobile !== isMobile) { setIsMobile(ismobile) };
+      setMenuButton(<FiMenu />)
+      setIsOpen(false)
     }, false)
   }, [isMobile])
-
-  const [toggle, setToggle] = useState(false)
-  const classOnMenuClick = () => {
-    setToggle(!toggle)
-    const navList = document.querySelector('#navList');
-    if (toggle) {
-      navList.classList = 'nav-dropdown';
-    } else {
-      navList.classList = ('nav-dropdown nav-dropdown-show');
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const [menuButton, setMenuButton] = useState(<FiMenu />)
+  const handleMenuButton = () => {
+    const navList = document.getElementById('nav-list');
+    setIsOpen(!isOpen);
+    if (isMobile) {
+      if (!isOpen) {
+        setMenuButton(<FiX />)
+        navList.classList.add('nav-dropdown-show')
+      } else {
+        setMenuButton(<FiMenu />)
+        navList.classList = 'nav-dropdown'
+      }
     }
   }
+
+  const hideMenu = () => {
+    const navList = document.getElementById('nav-list');
+    navList.classList.remove('nav-dropdown-show')
+    setMenuButton(<FiMenu />)
+    setIsOpen(false)
+  }
+
+  // Styling menu buttons
+  let iconStyle = {}
 
   // Add color to the selected list-item
   let activeClassName = "clr-primary";
@@ -31,37 +48,36 @@ function Navbar({ fixed }) {
   // return
   return (
     <>
-      <nav className='relative bg-white'>
+      <nav className='bg-white w-full'>
 
-        <div className='w-full px-10 py-10 flex justify-between'>
+        <div className='px-10 py-10 flex justify-between'>
           {/* LOGO */}
           <Link to='/'><img src={logo} alt='logo-image'></img></Link>
           {/* Mobile dropdown */}
-          <button className='text-gray-400 md:hidden' onClick={classOnMenuClick}>
-            <span className='sr-only'></span>
-            <span className="material-symbols-outlined ">
-              menu
-            </span>
+          <button className={isMobile ? 'text-gray-500 text-3xl' : 'hidden'} onClick={handleMenuButton}>
+            <span className='sr-only'>Menu</span>
+            <span>{menuButton}</span>
+            {/* <FiX /> */}
           </button>
           {/* Desktop menu */}
-          <ul id='navList' className={isMobile ? 'nav-dropdown' : 'flex items-center gap-24'}>
+          <ul id='nav-list' className={isMobile ? 'nav-dropdown' : 'flex items-center gap-24'}>
             <li>
-              <Link to='/' className={({ isActive }) => isActive ? activeClassName : undefined}>
+              <Link to='/' className={({ isActive }) => isActive ? activeClassName : undefined} onClick={hideMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to='/product' className={({ isActive }) => isActive ? activeClassName : undefined}>
+              <Link to='/product' className={({ isActive }) => isActive ? activeClassName : undefined} onClick={hideMenu}>
                 Product
               </Link>
             </li>
             <li>
-              <Link to='/faq' className={({ isActive }) => isActive ? activeClassName : undefined}>
+              <Link to='/faq' className={({ isActive }) => isActive ? activeClassName : undefined} onClick={hideMenu}>
                 FAQ
               </Link>
             </li>
             <li>
-              <Link to='/contact' className={({ isActive }) => isActive ? activeClassName : undefined}>
+              <Link to='/contact' className={({ isActive }) => isActive ? activeClassName : undefined} onClick={hideMenu}>
                 Contact
               </Link>
             </li>
